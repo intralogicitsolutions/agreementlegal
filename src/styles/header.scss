@@ -1,0 +1,71 @@
+@import "./variables.scss";
+
+nav {
+    background-color: $white;
+    height: 80px;
+
+    .navbar-nav {
+        background-color: $white;
+
+        .navbar-nav .nav-link:hover {
+            color: $orange;
+        }
+
+        .nav-item {
+            padding: 20px 20px;
+
+            .nav-link {
+                font-family: 'Oswald',
+                    sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.01em;
+                color: #1E2B3C;
+            }
+        }
+
+    }
+
+    .active {
+        background-color: $orange;
+
+        .nav-link {
+
+            color: $white !important;
+        }
+
+
+    }
+
+
+
+
+
+}
+
+@media only screen and (max-width: 767px) {
+    nav {
+        height: inherit;
+
+        .navbar-nav {
+            .nav_anchor {
+                text-align: end;
+            }
+
+
+            .nav-item {
+                padding: 5px 20px;
+            }
+        }
+    }
+}
+
+.navbar-collapse {
+    flex-grow: inherit !important;
+}
+// .footer-main {
+//     padding-left: 60px;
+//     padding-right: 60px;
+// }
