@@ -1,17 +1,6 @@
-import React from 'react';
-import {
-	Collapse,
-	Navbar,
-	NavbarToggler,
-	NavbarBrand,
-	Nav,
-	NavItem,
-	NavLink,
-	UncontrolledDropdown,
-	DropdownToggle,
-	DropdownMenu,
-	DropdownItem,
-} from 'reactstrap';
+import React, { useState } from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import logo from '../../../../assets/images/logo.png';
 import '../../../../styles/header.scss';
 export default class NavbarMain extends React.Component {
@@ -38,27 +27,27 @@ export default class NavbarMain extends React.Component {
 				<Collapse isOpen={this.state.isOpen} navbar>
 					<Nav className='ml-auto ' navbar>
 						<NavItem>
-							<NavLink className='nav_anchor' href='/agreements'>
+							<NavLink className='nav_anchor nav-link' to='/agreements'>
 								All Agreements
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink className='nav_anchor' href='/about'>
+							<NavLink className='nav_anchor nav-link' to='/about'>
 								About Us
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink className='nav_anchor' href='/blogs'>
+							<NavLink className='nav_anchor nav-link' to='/blogs'>
 								Blogs
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink className='nav_anchor' href='/pricing'>
+							<NavLink className='nav_anchor nav-link' to='/pricing'>
 								Pricing
 							</NavLink>
 						</NavItem>
 						<NavItem className='active '>
-							<NavLink href='/account' className='nav_anchor'>
+							<NavLink to='/auth' className='nav_anchor nav-link'>
 								My Account
 							</NavLink>
 						</NavItem>
