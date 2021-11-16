@@ -1,12 +1,14 @@
 import UserContainer from '../components/routeContainers/userContainer';
 import React from 'react';
-import { Route } from 'react-router-dom';
-
+import { Route, Switch } from 'react-router-dom';
+import AdminContainer from '../components/routeContainers/adminContainer';
 const RoutesConfig = () => {
-	console.log('route');
 	return (
 		<div className='routeComponent'>
-			<Route component={UserContainer} />
+			<Switch>
+				<Route path='/admin' component={AdminContainer} />
+				<Route component={UserContainer} />
+			</Switch>
 		</div>
 	);
 };

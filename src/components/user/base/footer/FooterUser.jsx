@@ -7,14 +7,14 @@ import tw from '../../../../assets/icons/tw.png';
 import ig from '../../../../assets/icons/ig.png';
 const FooterUser = () => {
 	return (
-		<footer className='site-footer mt-auto'>
+		<footer className='site-footer '>
 			{/* <div className='container'> */}
 			<div className='row col-12 footer-main'>
 				<div className='col-xs-12 col-sm-6 col-md-6 col-lg-6'>
 					<p className='text-justify'>
 						<img src={logo} />
-						<p className='copyright-text mt-3'>All rights reserved 2021</p>
 					</p>
+					<div className='copyright-text mt-3 mb-3'>All rights reserved 2021</div>
 					<img src={ig} alt='Instagram' className='mx-2' /> <img src={tw} className='mx-2' />
 					<img src={fb} className='mx-2' />
 				</div>
@@ -24,13 +24,13 @@ const FooterUser = () => {
 							<Link to='/agreements'>Agreements</Link>
 						</li>
 						<li>
-							<Link href='/pricing'>Pricing</Link>
+							<Link to='/pricing'>Pricing</Link>
 						</li>
 						<li>
-							<Link href='/account'>My Account</Link>
+							<Link to='/account'>My Account</Link>
 						</li>
 						<li>
-							<Link href='/blogs'>Blogs</Link>
+							<Link to='/blogs'>Blogs</Link>
 						</li>
 					</ul>
 				</div>

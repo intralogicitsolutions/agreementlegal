@@ -5,11 +5,12 @@
         sans-serif;
     background: #e5e5e5;
     display: flex;
-    // height: 100vh;
+    height: 78vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    margin-top: 80px;
 }
 
 h2::selection,
@@ -27,7 +28,7 @@ button::selection {
     padding: 2rem;
     // margin: 75px;
 
-    margin-top: 130PX;
+    margin-top: 75PX;
     margin-bottom: 25px;
     /* background: #fff; */
     /* box-shadow: 0 0px 2.2px rgba(0, 0, 0, 0.028), 0 0px 5.3px rgba(0, 0, 0, 0.04),
@@ -105,13 +106,16 @@ i {
     background: rgba(173, 216, 230, 1);
 }
 
+
 .form-group input[type="text"]:focus,
 .form-group input[type="text"]:focus-visible,
 .form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
 .form-group textarea:focus {
-    border: 1px solid rgba(30, 43, 60, 0.36) !important;
+    // border: 1px solid rgba(30, 43, 60, 0.36) !important;
     outline: none !important;
 }
+
 
 @media screen and (min-width: 576px) {
     .wrapper {
@@ -180,12 +184,26 @@ i {
     margin-right: 0 !important;
 }
 
+.form-group .error,
+.form-group .error:focus {
+    border: 1px solid red !important;
+}
+
+.form-group .errorMsg {
+    color: red;
+    font-size: small;
+    padding: 0;
+
+}
+
 .input-label {
     width: 100%;
     padding: 10px 10px 10px 90px !important;
     box-sizing: border-box;
     border: none;
 }
+
+
 
 .input-label+label {
     font-family: "Open Sans", sans-serif !important;
