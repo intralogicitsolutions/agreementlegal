@@ -13,6 +13,15 @@ Amplify.configure({
 		userPoolId: config.cognito.USER_POOL_ID,
 		identityPoolId: config.cognito.IDENTITY_POOL_ID,
 		userPoolWebClientId: config.cognito.APP_CLIENT_ID
+	},
+	API: {
+		endpoints: [
+			{
+				name: "admin",
+				endpoint: new URL("/admin", config.apiGateway.URL).toString(),
+				region: config.apiGateway.REGION
+			},
+		]
 	}
 });
 
